@@ -1,0 +1,572 @@
+
+
+
+
+/* ---------------------BASE--------------------- */
+
+
+
+html{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* height: 10000px; */
+}
+
+.background {
+    position: fixed;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+.backgroundiv {
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+
+
+
+
+
+/* ---------------------NAVIGATION-BAR--------------------- */
+
+
+
+
+
+
+
+
+.navdiv {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(40, 40, 40), rgb(80, 80, 80));
+    height: 75px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.imgdiv {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 90px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.img1 {
+    width: 200px;
+}
+
+.navbar div {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: rgba(0, 0, 0, 0);
+    transition: all 0.5s ease;
+}
+
+
+.navbar div .custom_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    /* border: 1px solid black; */
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar div:hover {
+    background-color: rgba(0, 0, 0, 0.373);
+    font-size: 25px;
+    border-bottom: rgb(255, 255, 255);
+
+}
+
+.langdiv {
+    width: 300px;
+}
+
+.navbar div img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+/* ---------------------MOVIE-BOX--------------------- */
+
+
+
+
+
+
+
+.inception {
+    position: relative;
+    height: 567px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+
+.inceptiondiv {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.moviediv>div:not(.inceptiondiv) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moviediv div>img:not(.inception) {
+    height: 270px;
+    border-radius: 5px;
+}
+
+.moviediv {
+    background-color: rgba(0, 0, 0, 0.699);
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 50%);
+    width: 1150px;
+    height: 767px;
+    border-radius: 10px;
+}
+
+.moviediv div {
+    border: 5px solid rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+
+.header1 h1 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+#img {
+    transition: all 0.5s ease;
+}
+
+input {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+/* ---------------------OTHER_MOVIES--------------------- */
+
+.othermovies{
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    height: 2400px;
+    width: 1600;
+}
+
+.othermovies > div:not(.hoverdiv2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 400px;
+
+}
+
+
+.movieimg{
+    height: 500px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+
+.hoverdiv2 {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0);
+    height: 500px;
+    width: 350px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
+
+
+.hoverdiv2:hover {
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+
+.hoverdiv2:hover .hoverh2 {
+    color: white;
+    font-size: 25px;
+}
+
+.hoverh2:hover {
+    color: black;
+    background-color: rgb(30, 30, 30);
+}
+
+.hoverh2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 50px;
+    width: 350px;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.glogo{
+    width: 300px;
+}
+
+
+
+
+
+/* ---------------------TRANSITION-CUSTOMIZATION--------------------- */
+
+
+
+
+
+
+/* div created to customize hover on top of inception img */
+.hoverdiv {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    height: 557px;
+    width: 373px;
+    bottom: 113px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+/* div created to customize hover on top of other images */
+
+.hoverdiv1 {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0);
+    visibility: hidden;
+    height: 565px;
+    width: 374px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 100;
+}
+
+.hoverh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 50px;
+    width: 373px;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.trigger-box h1,
+.moviediv div>h1:not(.hoverdiv h1):not(.hoverdiv1 h1) {
+    font-size: 35px;
+    margin-top: 22px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+/* ---------------------TRANSITION-MECHANICS--------------------- */
+
+
+
+
+
+
+/* mechanics responsible for hover effect for div on top of images */
+
+.hoverdiv:hover,
+.hoverdiv1:hover {
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+
+
+.hoverdiv:hover .hoverh1,
+.hoverdiv1:hover .hoverh1 {
+    color: white;
+    font-size: 25px;
+}
+
+.hoverh1:hover {
+    color: black;
+    background-color: rgb(30, 30, 30);
+
+}
+
+/* mechanics responsible for making div on top of images visible*/
+
+.hidden-control:checked ~ #priorityswitch .hoverdiv1{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* machanics responsible for turning small images into priority images on click */
+
+.hidden-control:checked ~ #priorityswitch img{
+    height: 100%;
+    width: auto;
+}
+
+#priorityswitch{
+    height: 270px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+/* Interstellar */
+#mover-switch1:checked ~ .priorityswitch1 {
+    transform: translateX(-427px) translateY(-5px) ;
+    height: 575px;
+}
+/* Figth-club */
+#mover-switch2:checked ~ .priorityswitch2 {
+    transform: translateX(-657px) translateY(-5px) ;
+    height: 575px;
+}
+/* Blade-runner */
+#mover-switch3:checked ~ .priorityswitch3 {
+    transform: translateX(-887px) translateY(-5px) ;
+    height: 575px;
+}
+/* Green-book */
+#mover-switch4:checked ~ .priorityswitch4 {
+    transform: translateX(-427px) translateY(-390px) ;
+    height: 575px;
+}
+
+/* Maze-runner */
+#mover-switch5:checked ~ .priorityswitch5{
+    transform: translateX(-657px) translateY(-390px) ;
+    height: 575px;
+}
+
+/* The-Godfather */
+#mover-switch6:checked ~ .priorityswitch6{
+    transform: translateX(-887px) translateY(-390px) ;
+    height: 575px;
+}
+
+
+
+
+
+
+
+/* ---------------------FOOTER--------------------- */
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 1px 0;
+    border: 0;
+    overflow: hidden;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer div img{
+    width: 50px;
+}
+footer div{
+    vertical-align: bottom;
+}
+
+.logodiv{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    /* border: 1px solid black; */
+}
+
+.fb{
+    width: 60px;
+
+}
+
+.whatsapp{
+    width: 40px;
+}
+
+.Contact{
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    /* border: 1px solid black; */
+}
+.copyright{
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright h1{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    /* border: 1px solid black; */
+}
+
+.designers{
+    width: 1200px;
+    display: flex;
+    flex-direction:  column;
+}
